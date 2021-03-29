@@ -7,7 +7,6 @@ import Dashboard from './Control/Dashboard.vue'
 import Console from './Control/Console.vue'
 
 import Display from './Files/Display.vue'
-import Filaments from './Files/Filaments.vue'
 import Jobs from './Files/Jobs.vue'
 import Macros from './Files/Macros.vue'
 import System from './Files/System.vue'
@@ -184,7 +183,6 @@ Vue.use(Console)
 
 // Files
 Vue.use(Display)
-Vue.use(Filaments)
 Vue.use(Jobs)
 Vue.use(Macros)
 Vue.use(System)

@@ -74,15 +74,7 @@ export default [
 			'./AutoUpdate/index.js'
 		)
 	}),*/
-	new DwcPlugin({
-		name: 'Height Map',
-		author: 'Duet3D Ltd',
-		version,
-		loadDwcResources: () => import(
-			/* webpackChunkName: "HeightMap" */
-			'./HeightMap/index.js'
-		)
-	}),
+
 	new DwcPlugin({
 		name: 'G-Code Viewer',
 		author: 'Juan Rosario',

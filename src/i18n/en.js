@@ -579,15 +579,6 @@ export default {
 		},
 		movement: {
 			caption: 'Machine Movement',
-			compensation: 'Compensation & Calibration',
-			runBed: 'True Bed Levelling (G32)',
-			runDelta: 'Delta Calibration (G32)',
-			compensationInUse: 'Compensation in use: {0}',
-			disableBedCompensation: 'Disable Bed Compensation (M561)',
-			disableMeshCompensation: 'Disable Mesh Compensation (G29 S2)',
-			editMesh: 'Define Area for Mesh Compensation (M557)',
-			runMesh: 'Run Mesh Compensation (G29)',
-			loadMesh: 'Load Saved Height Map from SD Card (G29 S1)',
 			axesNotHomed: 'The following axis is not homed:|The following axes are not homed:',
 			noAxes: 'No Axes'
 		},

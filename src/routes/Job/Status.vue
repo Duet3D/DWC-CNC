@@ -23,19 +23,12 @@
 					<v-col cols="12" class="d-none d-sm-block d-md-none">
 						<speed-factor-panel></speed-factor-panel>
 					</v-col>
-					<v-col cols="12" class="d-none d-sm-block d-md-none">
-						<extrusion-factors-panel></extrusion-factors-panel>
-					</v-col>
 				</v-row>
 			</v-col>
 
 			<v-col order="0" order-md="2" cols="12" md="5" xl="7" class="py-0 d-none d-sm-flex flex-column">
-				<layer-chart class="chart-height-limit" :class="{ 'my-3': $vuetify.breakpoint.mdAndUp }"></layer-chart>
 
 				<v-row class="flex-grow-0 flex-shrink-1 d-none d-md-flex">
-					<v-col cols="12">
-						<job-estimations-panel></job-estimations-panel>
-					</v-col>
 					<v-col cols="12">
 						<job-data-panel></job-data-panel>
 					</v-col>
@@ -68,9 +61,6 @@
 					</v-col>
 					<v-col cols="12">
 						<fans-panel></fans-panel>
-					</v-col>
-					<v-col cols="12" class="hidden-sm-only">
-						<extrusion-factors-panel></extrusion-factors-panel>
 					</v-col>
 				</v-row>
 			</v-col>
