@@ -1,7 +1,29 @@
-<template>
+
+<template v-if="isFFForUnset()">
 	<v-card outlined>
 		<v-tabs>
-
+			<v-tab>{{ $t('panel.settingsListItems.toolTemperatures') }}</v-tab>
+			<v-tab>{{ $t('panel.settingsListItems.bedTemperatures') }}</v-tab>
+			<v-tab>{{ $t('panel.settingsListItems.chamberTemperatures') }}</v-tab>
+			<v-tab>{{ $t('panel.settingsListItems.spindleRPM') }}</v-tab>
+			<v-tab-item class="px-3">
+				<list-editor itemKey="tool" temperature></list-editor>
+			</v-tab-item>
+			<v-tab-item class="px-3">
+				<list-editor itemKey="bed" temperature></list-editor>
+			</v-tab-item>
+			<v-tab-item class="px-3">
+				<list-editor itemKey="chamber" temperature></list-editor>
+			</v-tab-item>
+			<v-tab-item class="px-3">
+				<list-editor itemKey="spindleRPM"></list-editor>
+			</v-tab-item>
+		</v-tabs>
+	</v-card>
+</template>
+<template v-else>
+	<v-card outlined>
+		<v-tabs>
 			<v-tab>{{ $t('panel.settingsListItems.spindleRPM') }}</v-tab>
 			<v-tab-item class="px-3">
 				<list-editor itemKey="spindleRPM"></list-editor>

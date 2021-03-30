@@ -34,6 +34,7 @@ import CNCMovementPanel from './CNCMovementPanel.vue'
 import CNCDashboardPanel from './CNCDashboardPanel.vue'
 import SpindleSpeedPanel from './SpindleSpeedPanel'
 
+
 Vue.component('atx-panel', ATXPanel)
 Vue.component('extrude-panel', ExtrudePanel)
 Vue.component('extrusion-factors-panel', ExtrusionFactorsPanel)
@@ -65,3 +66,4 @@ Vue.component('cnc-container-panel', CNCContainerPanel)
 Vue.component('cnc-movement-panel', CNCMovementPanel)
 Vue.component('cnc-dashboard-panel', CNCDashboardPanel)
 Vue.component('spindle-speed-panel', SpindleSpeedPanel)
+
