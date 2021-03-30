@@ -32,6 +32,7 @@ import CNCAxesPosition from './CNCAxesPosition.vue'
 import CNCContainerPanel from './CNCContainerPanel.vue'
 import CNCMovementPanel from './CNCMovementPanel.vue'
 import CNCDashboardPanel from './CNCDashboardPanel.vue'
+import CNCSettingsListItemsPanel from './CNCSettingsListItemsPanel.vue'
 import SpindleSpeedPanel from './SpindleSpeedPanel'
 
 Vue.component('atx-panel', ATXPanel)
@@ -64,4 +65,5 @@ Vue.component('fff-dashboard-panel', FFFDashboardPanel)
 Vue.component('cnc-container-panel', CNCContainerPanel)
 Vue.component('cnc-movement-panel', CNCMovementPanel)
 Vue.component('cnc-dashboard-panel', CNCDashboardPanel)
+Vue.component('cnc-settings-list-items-panel', CNCSettingsListItemsPanel)
 Vue.component('spindle-speed-panel', SpindleSpeedPanel)

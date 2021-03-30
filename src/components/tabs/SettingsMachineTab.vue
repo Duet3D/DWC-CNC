@@ -13,9 +13,11 @@
 				</v-col>
 			</v-row>
 		</v-col>
-
-		<v-col cols="12" md="8">
+		<v-col v-if="isFFForUnset" cols="12" md="8">
 			<settings-list-items-panel></settings-list-items-panel>
+		</v-col>
+		<v-col v-else>
+			<cnc-settings-list-items-panel></cnc-settings-list-items-panel>
 		</v-col>
 	</v-row>
 </template>
@@ -25,10 +27,21 @@
 
 import { registerSettingTab } from '../../routes'
 
+import { mapState } from 'vuex'
+import { MachineMode } from '../../store/machine/modelEnums.js';
+
 export default {
 	install() {
 		// Register a settings tab on the Machine settings page
 		registerSettingTab(false, 'settings-machine-tab', this, 'tabs.machineSettings.caption');
+	},
+	computed: {
+		...mapState('machine/model', {
+			machineMode: state => state.state.machineMode
+		}),
+		isFFForUnset() {
+			return !this.machineMode || (this.machineMode === MachineMode.fff);
+		}
 	}
 }
 </script>
