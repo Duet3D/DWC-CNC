@@ -13,8 +13,9 @@
 						<strong>Status</strong>
 					</v-card-title>
 					<v-card-text>
-						<status-label v-if="status"></status-label>
+						<status-label v-if="status"></status-label>	
 					</v-card-text>
+					<span v-if="machineMode">{{ $t('panel.status.mode', [machineMode.toUpperCase()])}}</span>
 				</v-card>
 			</v-col>
 			<v-col cols="12" order="4" sm="12" md="4"  order-md="2" lg="4">
