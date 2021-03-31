@@ -5,41 +5,14 @@
 			<v-icon small class="mr-1">mdi-clock</v-icon> {{ $t('panel.jobEstimations.caption') }}
 		</v-card-title>
 
-		<v-card-text class="text-center pb-1">
+		<v-card-text class="text-left pb-1">
 			<v-row dense>
-				<v-col class="d-flex flex-column">
-					<strong>
-						{{ $t('panel.jobEstimations.filament') }}
-					</strong>
-					<span>
-						{{ $displayTime(job.timesLeft.filament) }}
-					</span>
-				</v-col>
-
 				<v-col class="d-flex flex-column">
 					<strong>
 						{{ $t('panel.jobEstimations.file') }}
 					</strong>
 					<span>
 						{{ $displayTime(job.timesLeft.file) }}
-					</span>
-				</v-col>
-
-				<v-col class="d-flex flex-column">
-					<strong>
-						{{ $t('panel.jobEstimations.layer') }}
-					</strong>
-					<span>
-						{{ $displayTime(job.timesLeft.layer) }}
-					</span>
-				</v-col>
-
-				<v-col v-if="job.file.printTime && !isSimulating" class="d-flex flex-column">
-					<strong>
-						{{ $t('panel.jobEstimations.slicer') }}
-					</strong>
-					<span>
-						{{ $displayTime(isPrinting ? Math.max(0, job.file.printTime - job.duration) : job.file.printTime) }}
 					</span>
 				</v-col>
 
@@ -53,7 +26,7 @@
 				</v-col>
 			</v-row>
 		</v-card-text>
-	</v-card>
+    </v-card>
 </template>
 
 <script>

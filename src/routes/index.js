@@ -177,6 +177,7 @@ export function registerSettingTab(general, name, component, caption, translated
 		MachineSettingTabs.push(tab);
 	}
 }
+//import { mapState } from 'vuex'
 
 // Control
 Vue.use(Dashboard)

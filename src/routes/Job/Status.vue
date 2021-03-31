@@ -33,8 +33,11 @@
 				<layer-chart class="chart-height-limit" :class="{ 'my-3': $vuetify.breakpoint.mdAndUp }"></layer-chart>
 
 				<v-row class="flex-grow-0 flex-shrink-1 d-none d-md-flex">
-					<v-col cols="12">
+					<v-col v-if="isFFForUnset" cols="12">
 						<job-estimations-panel></job-estimations-panel>
+					</v-col>
+					<v-col v-else>
+						<cnc-job-estimations-panel></cnc-job-estimations-panel>
 					</v-col>
 					<v-col cols="12">
 						<job-data-panel></job-data-panel>
@@ -69,7 +72,7 @@
 					<v-col cols="12">
 						<fans-panel></fans-panel>
 					</v-col>
-					<v-col cols="12" class="hidden-sm-only">
+					<v-col v-if="isFFForUnset" cols="12" class="hidden-sm-only">
 						<extrusion-factors-panel></extrusion-factors-panel>
 					</v-col>
 				</v-row>
@@ -82,8 +85,18 @@
 'use strict'
 
 import { registerRoute } from '..'
+import { mapState } from 'vuex'
+import { MachineMode } from '../../store/machine/modelEnums.js';
 
 export default {
+	computed: {
+		...mapState('machine/model', {
+			machineMode: state => state.state.machineMode
+		}),
+		isFFForUnset() {
+			return !this.machineMode || (this.machineMode === MachineMode.fff);
+		}
+	},	
 	install() {
 		// Register a route via Current Job -> Status
 		registerRoute(this, {
