@@ -1,3 +1,7 @@
+# DWC-CNC Merging With Duet Web Control
+
+DWC-CNC's changes have been merged into Duet Web Control 3.4-b2. In Duet Web Control 3.4 there is a menu option to select which dashboard you want to use or by default it will use the dashboard based on the Duet's mode. This project will no longer be receiving updates.
+
 # Duet Web Control - EXPERIMENTAL CNC version
 
 Duet Web Control is a fully-responsive HTML5-based web interface for RepRapFirmware which utilizes the Bootstrap framework, JQuery and a few other libraries to allow easy control of Duet-based 3D printer electronics.
